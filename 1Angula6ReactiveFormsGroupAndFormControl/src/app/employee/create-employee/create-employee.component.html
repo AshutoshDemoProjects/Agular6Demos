@@ -1,0 +1,79 @@
+<form [formGroup]="employeeForm" (ngSubmit)="onSubmit()" class="form-horizontal">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h4>Create Employee</h4>
+    </div>
+    <div class="panel-body">
+      <div class="form-group">
+        <label for="fullName" class="col-sm-2 control-label">Full Name</label>
+        <div class="col-sm-8">
+          <input type="text" formControlName="fullName" id="fullName" placeholder="Full Name" class="form-control">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email" class="col-sm-2 control-label">Email</label>
+        <div class="col-sm-8">
+          <input type="text" formControlName="email" id="email" placeholder="Email" class="form-control">
+        </div>
+      </div>
+      <div formGroupName="skills">
+
+        <div class="form-group">
+          <label for="skillName" class="col-sm-2 control-label">Skills</label>
+          <div class="col-sm-4">
+            <input type="text" formControlName="skillName" id="skillName" placeholder="Skill Name" class="form-control">
+          </div>
+          <div class="col-sm-4">
+            <input type="text" formControlName="experienceInYear" id="experienceInYear" placeholder="Experience In Year" class="form-control">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="proficiency" class="col-sm-2 control-label">Proficiency</label>
+          <div class="col-sm-8">
+            <label class="radio-inline">
+              <input type="radio" value="beginner" formControlName="proficiency" id="proficiency" >Beginner
+            </label>
+            <label class="radio-inline">
+              <input type="radio" value="intermediate" formControlName="proficiency" id="proficiency">Intermediate
+            </label>
+            <label class="radio-inline">
+              <input type="radio" value="advanced" formControlName="proficiency" id="proficiency" >Advanced
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="panel-footer">
+      <div class="btn-toolbar">
+        <button class="btn btn-primary  pull-right" type="button" (click)="onLoadDataClick()">Load Data</button>
+        <button class="btn btn-primary  pull-right" type="submit" >save</button>
+      </div>
+    </div>
+  </div>
+</form>
+<div class="table-responsive">
+  <table class="table">
+    <tr>
+      <th>FormGroup</th>
+      <th>FormControl(fullName)</th>
+    </tr>
+    <tr>
+      <td class="col-sm-6">
+        <ul class="list-group">
+          <li class="list-group-item">touched:{{employeeForm.touched}}</li>
+          <li class="list-group-item">dirty:{{employeeForm.dirty}}</li>
+          <li class="list-group-item">valid:{{employeeForm.valid}}</li>
+          <li class="list-group-item">Values:{{employeeForm.value | json}}</li>
+        </ul>
+      </td>
+      <td>
+        <ul class="list-group">
+          <li class="list-group-item">touched:{{employeeForm.controls.fullName.touched}}</li>
+          <li class="list-group-item">dirty:{{employeeForm.controls.fullName.dirty}}</li>
+          <li class="list-group-item">valid:{{employeeForm.get("fullName").valid}}</li>
+          <li class="list-group-item">Values:{{employeeForm.get("fullName").value}}</li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+</div>

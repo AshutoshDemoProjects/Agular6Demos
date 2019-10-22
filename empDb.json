@@ -1,0 +1,75 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "fullName": "Ashutosh Sonawane",
+      "contactPreference": "email",
+      "email": "as@as.com",
+      "phone": 9785461234,
+      "skills": [
+        {
+          "skillName": "java",
+          "experienceInYear": 4,
+          "proficiency": "intermediate"
+        },
+        {
+          "skillName": "Angular",
+          "experienceInYear": 2,
+          "proficiency": "beginner"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "fullName": "Manoj Deshmukh",
+      "contactPreference": "phone",
+      "email": "asw@asw.com",
+      "phone": "9478464321",
+      "skills": [
+        {
+          "skillName": "java",
+          "experienceInYear": "2",
+          "proficiency": "beginner"
+        },
+        {
+          "skillName": "Angular",
+          "experienceInYear": "4",
+          "proficiency": "intermediate"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "fullName": "Shubhangi Kale",
+      "contactPreference": "email",
+      "email": "kahihi@as.com",
+      "phone": "9638463421",
+      "skills": [
+        {
+          "skillName": "java",
+          "experienceInYear": 4,
+          "proficiency": "intermediate"
+        },
+        {
+          "skillName": "Angular",
+          "experienceInYear": 2,
+          "proficiency": "intermediate"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "fullName": "Lakshamn",
+      "contactPreference": "email",
+      "email": "asd@asd.as",
+      "phone": "4444222221",
+      "skills": [
+        {
+          "skillName": "java",
+          "experienceInYear": "4",
+          "proficiency": "intermediate"
+        }
+      ]
+    }
+  ]
+}
